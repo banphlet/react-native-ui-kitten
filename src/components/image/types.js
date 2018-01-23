@@ -35,7 +35,7 @@ export const RkModalImgTypes = (theme) => {
       img: {
         width: 120,
         height: 120,
-        resizeMode: 'cover',
+        //resizeMode: 'cover',
         margin: 2,
       },
       modal:{
