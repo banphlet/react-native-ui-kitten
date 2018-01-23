@@ -14,6 +14,7 @@ import {RkButton} from '../button/rkButton';
 import {RkText} from '../text/rkText';
 import {RkComponent} from '../rkComponent';
 import {RkTheme} from '../../styles/themeManager';
+import FastImage from 'react-native-fast-image'
 
 /**
  * `RkModalImg` is extension of basic `Image` that also opens it in full screen on tap.
@@ -187,7 +188,7 @@ export class RkModalImg extends RkComponent {
     return (
       <TouchableWithoutFeedback style={{flex:1}}
                                 onPress={() => this._toggleControls()}>
-        <Image source={source} {...props}/>
+        <FastImage source={source} {...props}/>
       </TouchableWithoutFeedback>
     )
   }
@@ -322,7 +323,7 @@ export class RkModalImg extends RkComponent {
       <View>
         <TouchableWithoutFeedback style={[imgContainer, imgContainerStyle]}
                                   onPress={() => {this.needUpdateScroll = true; this.setState({visible: true});}}>
-          <Image source={basicSource} style={[img, imgStyle]} {...imgProps}/>
+          <FastImage source={basicSource} style={[img, imgStyle]} {...imgProps}/>
         </TouchableWithoutFeedback>
         <Modal supportedOrientations={['portrait', 'landscape']}
           onRequestClose={closeImage}
